@@ -19,33 +19,42 @@
     }
 
     .marquee-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
         width: 100%;
-        height: 100%;
+        height: 58px;
         overflow: hidden;
         display: flex;
         align-items: center;
-        background: transparent !important;
+        background: rgba(0, 0, 0, 0.88);
     }
 
     .marquee {
         display: inline-block;
         white-space: nowrap;
-        color: #ffffff;
+        padding-left: 100vw;
+
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 42px;
-        font-weight: 700;
-        letter-spacing: 1px;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+
+        color: #ffffff;
+
         text-shadow:
-            2px 2px 3px rgba(0,0,0,0.95),
-            -1px -1px 2px rgba(0,0,0,0.7);
-        animation: mover 28s linear infinite;
+            1px 1px 2px rgba(0, 0, 0, 0.9),
+            -1px -1px 1px rgba(0, 0, 0, 0.6);
+
+        animation: desplazamiento 38s linear infinite;
         will-change: transform;
     }
 
-    @keyframes mover {
+    @keyframes desplazamiento {
         from {
-            transform: translateX(100vw);
+            transform: translateX(0);
         }
+
         to {
             transform: translateX(-100%);
         }
@@ -57,11 +66,15 @@
 
 <div class="marquee-container">
     <div class="marquee">
-        Nuestra Boda MARTIN &amp; ROBERTA
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Padrinos de Civil y Religion: EDMUNDO COLQUE Y Sra. CARLOTA RODRIGUEZ
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Producciones D-F: 1136479641
+        NUESTRA BODA Martín &amp; Roberta
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        PADRINOS DE RELIGIÓN Y CIVIL: Edmundo Colque y Sra. Carlota Rodríguez
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        LOCAL: Cancha Colque Torres
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        DIRECCIÓN: José San Tallon 1854-1800, Ingeniero Budge
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Producciones D-F: 1165756085
     </div>
 </div>
 
